@@ -1,0 +1,23 @@
+/* Error: Missing argument $rgrtttr.
+ *    ,--> sass\sub-stylesheet\_main.scss
+ * 6091|                                 @include transform(translateY(-50%));
+ *    |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
+ *    '
+ *    ,--> sass\sub-stylesheet\_mixins.scss
+ * 21 | @mixin transform($property, $rgrtttr){
+ *    |        ============================== declaration
+ *    '
+ *   sass\sub-stylesheet\_main.scss 6091:33  transform()
+ *   sass\sub-stylesheet\_main.scss 6091:33  @import
+ *   sass\style.scss 12:9                    root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Missing argument $rgrtttr.\a    \250c \2500 \2500 > sass\\sub-stylesheet\\_main.scss\a 6091\2502                                  @include transform(translateY(-50%));\d\a    \2502                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a    \2575 \a    \250c \2500 \2500 > sass\\sub-stylesheet\\_mixins.scss\a 21 \2502  @mixin transform($property, $rgrtttr){\d\a    \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a    \2575 \a   sass\\sub-stylesheet\\_main.scss 6091:33  transform()\a   sass\\sub-stylesheet\\_main.scss 6091:33  @import\a   sass\\style.scss 12:9                    root stylesheet";
+}
